@@ -1,0 +1,7 @@
+<h1>Hapus Buku</h1>
+<p>Apakah Anda yakin ingin menghapus buku "{{ book.title }}"?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Hapus</button>
+</form>
+<a href="{% url 'book_list' %}">Batal</a>
